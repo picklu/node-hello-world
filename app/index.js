@@ -90,15 +90,15 @@ handlers.notFound = function(data, callback) {
     var statusCode = 404;
     var message = 'The page was not found!';
     
-    callback(statusCode, {'message': message});
+    callback(statusCode, {'error': message});
 }
 
 // Hello handler
 handlers.hello = function(data, callback) {
     var statusCode = 200;
-    var message = 'Hello, World! Welcome to the JSON RESTful API';
+    var greeting = 'Hello, World! Welcome to the JSON RESTful API';
     
-    callback(statusCode, {'message': message});
+    callback(statusCode, {'greeting': greeting});
 }
 
 // Define a request router
