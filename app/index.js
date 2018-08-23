@@ -47,7 +47,8 @@ var httpServer = http.createServer(function(request, response) {
     request.on('end', function(data) {
        
         // Choose the handler the requst should go to.
-        var chosenHandler = typeof(router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : handlers.notFound;
+        var chosenHandler = typeof(router[trimmedPath]) !== 'undefined' ? 
+                router[trimmedPath] : handlers.notFound;
         
         // Route the request to the handler specified in the router
         chosenHandler(data, function(statusCode, payload) {
