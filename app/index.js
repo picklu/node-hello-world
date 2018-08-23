@@ -91,7 +91,7 @@ handlers.notFound = function(data, callback) {
     var statusCode = 404;
     var message = 'The page was not found!';
     
-    callback(statusCode, {'error': message});
+    callback(statusCode, {'status': 'error', 'error': message});
 }
 
 // Hello handler
@@ -99,7 +99,7 @@ handlers.hello = function(data, callback) {
     var statusCode = 200;
     var greeting = 'Hello, World! Welcome to the JSON RESTful API';
     
-    callback(statusCode, {'greeting': greeting});
+    callback(statusCode, {'status': 'success', 'greeting': greeting});
 }
 
 // Define a request router
